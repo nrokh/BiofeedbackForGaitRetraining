@@ -1,11 +1,11 @@
 # Biofeedback is necessary (but not sufficient) for gait retraining
 
-This repository contains all the necessary code to reproduce the experimental design and analytical findings described in Rokhmanova et al. (2025).  
+This repository contains all the necessary code to reproduce the experimental design and analytical findings described in Rokhmanova et al. (under review).  
 
 ## Data availability
 The full set of raw data are available in the Edmond repository linked [here](https://edmond.mpg.de/privateurl.xhtml?token=6656b649-fb6c-4941-91cc-e57072fb158f). The code shared in this repository outlines the full data processing pathway, from raw data to processed features.
 
-However, all post-processed features needed to run the statistical analyses and visualize experimental results are also shared here for convenience and ease in replicability. 
+In addition, all post-processed features needed to run the statistical analyses and visualize experimental results are also shared here for convenience and ease in replicability. 
 
 # Getting started
 This repository includes code from MATLAB, Python, and R.  
