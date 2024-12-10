@@ -30,7 +30,7 @@ in_proprio_out = data['in_proprio_out'][1:].flatten()
 
 # 1. Process
 # a. Make a dataframe for the proprioception data with the feedback condition
-df = pd.DataFrame({'Feedback Condition': fb_cond, 'Toe-In': in_proprio_in, 'Toe-Out': in_proprio_out, 'RMSE': in_proprio_RMSE})
+df = pd.DataFrame({'Feedback Condition': fb_cond, 'Toe-In': in_proprio_in, 'Toe-Out': in_proprio_out})
 
 # b. Plot the toe-in and toe-out proprioception data 
 fig, axs = plt.subplots(1, 2, figsize=(15, 5))
