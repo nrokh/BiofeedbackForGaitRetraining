@@ -1,6 +1,6 @@
 # Biofeedback is necessary (but not sufficient) for gait retraining
 
-This repository contains all the necessary code to reproduce the experimental design and analytical findings described in Rokhmanova et al. (under review).  
+This repository contains all the necessary code to reproduce the experimental design and analytical findings described in our manuscript.  
 
 ## Data availability
 The full set of raw data are available in the Edmond repository linked [here](https://edmond.mpg.de/privateurl.xhtml?token=6656b649-fb6c-4941-91cc-e57072fb158f). The code shared in this repository outlines the full data processing pathway, from raw data to processed features.
@@ -60,3 +60,17 @@ import os
     
 
 ## Analyzing experimental results:
+When running these scripts, make sure you have navigated to the _analysis_ folder, where you will find the following:
+* **main**
+   * All processing and analysis code to evaluate the primary outcome measures of this study.  
+* **CCA**
+   * Canonical Correlation Analysis input and output features, as well as the code to implement the analysis.
+* **deltaKAM**
+   * Features and scaling parameters to implement our previously-published model to predict KAM reduction magnitude.
+* **proprioAndVB**
+   * Visualizations of proprioceptive and vibrotactile task performance.
+* **vibrationDurations**
+   * Visualization comparing average vibration durations across the two feedback groups.
+
+
+
