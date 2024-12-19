@@ -60,3 +60,17 @@ import os
     
 
 ## Analyzing experimental results:
+When running these scripts, make sure you have navigated to the _analysis_ folder, where you will find the following:
+* **main**
+   * All processing and analysis code to evaluate the primary outcome measures of this study.  
+* **CCA**
+   * Canonical Correlation Analysis input and output features, as well as the code to implement the analysis.
+* **deltaKAM**
+   * Features and scaling parameters to implement our previously-published model to predict KAM reduction magnitude.
+* **proprioAndVB**
+   * Visualizations of proprioceptive and vibrotactile task performance.
+* **vibrationDurations**
+   * Visualization comparing average vibration durations across the two feedback groups.
+
+
+
