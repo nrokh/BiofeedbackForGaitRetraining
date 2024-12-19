@@ -13,7 +13,7 @@ root = tk.Tk()
 root.withdraw() 
 directory = filedialog.askdirectory()
 
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'proprioAndVB\\feedbackGroups.csv'))
 fb_cond = pd.read_csv(feedbackCond_csv_file).values.flatten()[:36] # 2 = SF, 1 = TF, 0 = NF
 
 subs_tot = 36
@@ -45,7 +45,7 @@ vbtest = []
 for i in range(subs_tot):
     sub = i+1
     sub_str = str(sub).zfill(2)
-    vbtest_file = os.path.normpath(os.path.join(directory, 's'+sub_str,'s'+sub_str+'_day1_vbtest.csv'))
+    vbtest_file = os.path.normpath(os.path.join(directory, 'processedData\\s'+sub_str,'s'+sub_str+'_day1_vbtest.csv'))
     vbtest.append(np.genfromtxt(vbtest_file, delimiter=','))
     if sub == 4:
         vbtest[3][0] = 1

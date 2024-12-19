@@ -49,7 +49,7 @@ root.withdraw()
 directory = filedialog.askdirectory()
 
 # b. Load feedback condition ID (1:SF, 2:TF, 0:NF)
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'main\\feedbackGroups.csv'))
 feedbackCond_file = pd.read_csv(feedbackCond_csv_file)
 
 # c. Iterate through subjects 
@@ -66,48 +66,48 @@ for subject in range(1,37):
 
     if subject < 10:
         # Load FPAs:
-        baseline_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_baseline_meanFPA.csv'))
+        baseline_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_baseline_meanFPA.csv'))
         baselineFPA = pd.read_csv(baseline_csv_file)
 
-        nf_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_noFB_meanFPA.csv'))
+        nf_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_noFB_meanFPA.csv'))
         nfFPA = pd.read_csv(nf_csv_file)
 
-        toein1_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_1.csv'))
+        toein1_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_1.csv'))
         toein1FPA = pd.read_csv(toein1_csv_file)
 
-        toein2_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_2.csv'))
+        toein2_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_2.csv'))
         toein2FPA = pd.read_csv(toein2_csv_file)
 
-        toein3_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_3.csv'))
+        toein3_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_3.csv'))
         toein3FPA = pd.read_csv(toein3_csv_file)
 
-        toein4_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_4.csv'))
+        toein4_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_4.csv'))
         toein4FPA = pd.read_csv(toein4_csv_file)
 
-        ret_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_retention_meanFPA.csv'))
+        ret_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_retention_meanFPA.csv'))
         retFPA = pd.read_csv(ret_csv_file)
 
         fullFPA = pd.concat([baselineFPA, toein1FPA, toein2FPA, toein3FPA, toein4FPA, retFPA])
     else:
-        baseline_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_baseline_meanFPA.csv'))
+        baseline_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_baseline_meanFPA.csv'))
         baselineFPA = pd.read_csv(baseline_csv_file)
 
-        nf_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_noFB_meanFPA.csv'))
+        nf_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_noFB_meanFPA.csv'))
         nfFPA = pd.read_csv(nf_csv_file)
 
-        toein1_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_meanFPA_1.csv'))
+        toein1_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_meanFPA_1.csv'))
         toein1FPA = pd.read_csv(toein1_csv_file)
 
-        toein2_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_meanFPA_2.csv'))
+        toein2_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_meanFPA_2.csv'))
         toein2FPA = pd.read_csv(toein2_csv_file)
 
-        toein3_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_meanFPA_3.csv'))
+        toein3_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_meanFPA_3.csv'))
         toein3FPA = pd.read_csv(toein3_csv_file)
 
-        toein4_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_meanFPA_4.csv'))
+        toein4_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_meanFPA_4.csv'))
         toein4FPA = pd.read_csv(toein4_csv_file)
 
-        ret_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_retention_meanFPA.csv'))
+        ret_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_retention_meanFPA.csv'))
         retFPA = pd.read_csv(ret_csv_file)
 
         fullFPA = pd.concat([baselineFPA, toein1FPA, toein2FPA, toein3FPA, toein4FPA, retFPA])

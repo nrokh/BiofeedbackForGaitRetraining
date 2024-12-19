@@ -15,14 +15,14 @@ root.withdraw()
 directory = filedialog.askdirectory()
 
 # a. select the file that has all the subject folders
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'proprioAndVB\\feedbackGroups.csv'))
 fb_cond = pd.read_csv(feedbackCond_csv_file).values.flatten()[:36] # 2 = SF, 1 = TF, 0 = NF
 
 # b. open files
 files = ['in_proprio_in.csv', 'in_proprio_out.csv']
 data = {}
 for file in files:
-    file_path = os.path.normpath(os.path.join(directory, 'features', file))
+    file_path = os.path.normpath(os.path.join(directory, 'proprioAndVB', file))
     data[file.split('.')[0]] = np.abs(np.genfromtxt(file_path, delimiter=',')) if 'RMSE' not in file else np.genfromtxt(file_path, delimiter=',')
 
 in_proprio_in = -data['in_proprio_in'][1:].flatten()

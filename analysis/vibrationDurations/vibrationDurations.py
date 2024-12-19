@@ -13,11 +13,11 @@ root.withdraw()
 directory = filedialog.askdirectory()
 
 # b. load feedback condition
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'vibrationDurations\\feedbackGroups.csv'))
 feedbackCond_file = pd.read_csv(feedbackCond_csv_file)
 
 # c. load bFPA
-in_bFPA_file = os.path.normpath(os.path.join(directory, 'features\\in_bFPA.csv'))
+in_bFPA_file = os.path.normpath(os.path.join(directory, 'vibrationDurations\\in_bFPA.csv'))
 in_bFPA = np.genfromtxt(in_bFPA_file, delimiter=',')
 baselineFPA = in_bFPA[1:]
 targetFPA = in_bFPA[1:] - 10.0
@@ -45,17 +45,17 @@ for subject in range(1,37):
 
     # a. load toe-in 
     if subject < 10: 
-        toein1_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_1.csv'))
+        toein1_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_1.csv'))
         tFPA_RT1 = pd.read_csv(toein1_csv_file)
 
-        toein4_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_4.csv'))
+        toein4_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_meanFPA_4.csv'))
         tFPA_RT4 = pd.read_csv(toein4_csv_file)
         
     else: 
-        toein1_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_meanFPA_1.csv'))
+        toein1_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_meanFPA_1.csv'))
         tFPA_RT1 = pd.read_csv(toein1_csv_file)
 
-        toein4_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_meanFPA_4.csv'))
+        toein4_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_meanFPA_4.csv'))
         tFPA_RT4 = pd.read_csv(toein4_csv_file)
 
 

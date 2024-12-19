@@ -27,45 +27,45 @@ np.set_printoptions(suppress=True) # suppress scientific notation
 # i. INPUTS:
 
     # height
-in_height_file = os.path.normpath(os.path.join(directory,'features\\in_height.csv'))
+in_height_file = os.path.normpath(os.path.join(directory,'CCA\\features\\in_height.csv'))
 in_height = np.abs(np.genfromtxt(in_height_file, delimiter=','))
 
     # weight
-in_weight_file = os.path.normpath(os.path.join(directory,'features\\in_weight.csv'))
+in_weight_file = os.path.normpath(os.path.join(directory,'CCA\\features\\in_weight.csv'))
 in_weight = np.abs(np.genfromtxt(in_weight_file, delimiter=','))
 
     # sex
-in_isFemale_file = os.path.normpath(os.path.join(directory,'features\\in_isFemale.csv'))
+in_isFemale_file = os.path.normpath(os.path.join(directory,'CCA\\features\\in_isFemale.csv'))
 in_isFemale = np.abs(np.genfromtxt(in_isFemale_file, delimiter=','))
 
     # vibration test accuracy
-in_vbtest_file = os.path.normpath(os.path.join(directory, 'features\\in_vbtest.csv'))
+in_vbtest_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\in_vbtest.csv'))
 in_vbtest = np.genfromtxt(in_vbtest_file, delimiter=',')
 
     # proprioception test accuracy
-in_proprio_in_file = os.path.normpath(os.path.join(directory,'features\\in_proprio_in.csv'))
+in_proprio_in_file = os.path.normpath(os.path.join(directory,'CCA\\features\\in_proprio_in.csv'))
 in_proprio_in = np.abs(np.genfromtxt(in_proprio_in_file, delimiter=','))
 
-in_proprio_out_file = os.path.normpath(os.path.join(directory,'features\\in_proprio_out.csv'))
+in_proprio_out_file = os.path.normpath(os.path.join(directory,'CCA\\features\\in_proprio_out.csv'))
 in_proprio_out = np.abs(np.genfromtxt(in_proprio_out_file, delimiter=','))
 
     # responsiveness to error
-in_resp_file = os.path.normpath(os.path.join(directory, 'features\\in_resp.csv'))
+in_resp_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\in_resp.csv'))
 in_resp = np.genfromtxt(in_resp_file, delimiter=',')
 
     # dynamic range of motion during gait
-in_ROM_in_file = os.path.normpath(os.path.join(directory, 'features\\in_ROM_in.csv'))
+in_ROM_in_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\in_ROM_in.csv'))
 in_ROM_in = np.genfromtxt(in_ROM_in_file, delimiter=',')    
 
-in_ROM_out_file = os.path.normpath(os.path.join(directory, 'features\\in_ROM_out.csv'))
+in_ROM_out_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\in_ROM_out.csv'))
 in_ROM_out = np.genfromtxt(in_ROM_out_file, delimiter=',')  
 
     # baseline FPA
-in_bFPA_file = os.path.normpath(os.path.join(directory, 'features\\in_bFPA.csv'))
+in_bFPA_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\in_bFPA.csv'))
 in_bFPA = np.genfromtxt(in_bFPA_file, delimiter=',')
 
     # feedback condition (binary, with NF as 0)
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'features\\feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\feedbackGroups.csv'))
 feedbackCond_file = pd.read_csv(feedbackCond_csv_file)
 in_cond_fb = np.zeros((36,))
 for i in range(1,37):
@@ -74,11 +74,11 @@ for i in range(1,37):
 
 # ii. OUTPUTS:
     # RMSE
-out_RMSE_file = os.path.normpath(os.path.join(directory, 'features\\out_RMSE.csv'))
+out_RMSE_file = os.path.normpath(os.path.join(directory, 'CCA\\features\\out_RMSE.csv'))
 out_RMSE = np.genfromtxt(out_RMSE_file, delimiter=',')
 
     # error ratio (note: error_in = 1 - error_out)
-out_errRatio_out_file = os.path.normpath(os.path.join(directory,'features\\out_errRatio_out.csv'))
+out_errRatio_out_file = os.path.normpath(os.path.join(directory,'CCA\\features\\out_errRatio_out.csv'))
 out_errRatio_out = np.abs(np.genfromtxt(out_errRatio_out_file, delimiter=','))
 
 

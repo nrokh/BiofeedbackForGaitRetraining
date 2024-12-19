@@ -65,12 +65,12 @@ root.withdraw()
 directory = filedialog.askdirectory()
 
 # a. load feature array
-inputFeatures_csv_file = os.path.normpath(os.path.join(directory, 'pKAM_features.csv'))
+inputFeatures_csv_file = os.path.normpath(os.path.join(directory, 'deltaKAM\\features\\pKAM_features.csv'))
 inputFeatures = pd.read_csv(inputFeatures_csv_file)
 print(inputFeatures.head()) #speed, height, weight, bFPA, alignment
 
 # b. load feedback condition ID (1:SF, 2:TF, 0:NF)
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'deltaKAM\\features\\feedbackGroups.csv'))
 feedbackCond_file = pd.read_csv(feedbackCond_csv_file)
 
 # 2. compute static alignment for each sub
@@ -86,26 +86,26 @@ for subject in range(1,37):
 
     # a. open subject static file and tFPAs
     if subject < 10: 
-        static_csv_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\s0' + str(subject) + '_static.csv'))
+        static_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\s0' + str(subject) + '_static.csv'))
         staticDF = pd.read_csv(static_csv_file, skiprows=4)
 
-        tFPA_NF_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\tFPA_NF.csv'))
+        tFPA_NF_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\tFPA_NF.csv'))
         tFPA_NF = pd.read_csv(tFPA_NF_file)
-        tFPA_RT4_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\tFPA_RT4.csv'))
+        tFPA_RT4_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\tFPA_RT4.csv'))
         tFPA_RT4 = pd.read_csv(tFPA_RT4_file)
-        tFPA_RET_file = os.path.normpath(os.path.join(directory, 's0' + str(subject)  + '\\tFPA_RET.csv'))
+        tFPA_RET_file = os.path.normpath(os.path.join(directory, 'processedData\\s0' + str(subject)  + '\\tFPA_RET.csv'))
         tFPA_RET = pd.read_csv(tFPA_RET_file)
         
 
     else: 
-        static_csv_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\s' + str(subject) + '_static.csv'))
+        static_csv_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\s' + str(subject) + '_static.csv'))
         staticDF = pd.read_csv(static_csv_file, skiprows=4)
 
-        tFPA_NF_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\tFPA_NF.csv'))
+        tFPA_NF_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\tFPA_NF.csv'))
         tFPA_NF = pd.read_csv(tFPA_NF_file)
-        tFPA_RT4_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\tFPA_RT4.csv'))
+        tFPA_RT4_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\tFPA_RT4.csv'))
         tFPA_RT4 = pd.read_csv(tFPA_RT4_file)
-        tFPA_RET_file = os.path.normpath(os.path.join(directory, 's' + str(subject)  + '\\tFPA_RET.csv'))
+        tFPA_RET_file = os.path.normpath(os.path.join(directory, 'processedData\\s' + str(subject)  + '\\tFPA_RET.csv'))
         tFPA_RET = pd.read_csv(tFPA_RET_file)
 
     # b. compute right leg AJC, KJC, HJC
@@ -134,7 +134,6 @@ for subject in range(1,37):
     C = np.sqrt( (HJCy - AJCy)**2 + (HJCz - AJCz)**2 )
 
     # cosine law: 
-    # TODO: check if it's 180-alignment or alignemnt-180
     alignment = 180 - np.rad2deg(np.arccos( (B**2 + A**2 - C**2)/(2*A*B) ))
 
     # d. store alignment; add to feature array (manually)
