@@ -65,7 +65,7 @@ in_bFPA_file = os.path.normpath(os.path.join(directory, 'features\\in_bFPA.csv')
 in_bFPA = np.genfromtxt(in_bFPA_file, delimiter=',')
 
     # feedback condition (binary, with NF as 0)
-feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'feedbackGroups.csv'))
+feedbackCond_csv_file = os.path.normpath(os.path.join(directory, 'features\\feedbackGroups.csv'))
 feedbackCond_file = pd.read_csv(feedbackCond_csv_file)
 in_cond_fb = np.zeros((36,))
 for i in range(1,37):
