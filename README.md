@@ -8,7 +8,7 @@ The full set of raw data are available in the Edmond repository linked [here](ht
 In addition, all post-processed features needed to run the statistical analyses and visualize experimental results are also shared here for convenience and ease in replicability. 
 
 # Getting started
-This repository includes code from MATLAB and Python. 
+This repository includes MATLAB and Python code. 
 
 ## Running the experiment
 ### Imports
