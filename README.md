@@ -1,4 +1,4 @@
-# Biofeedback is necessary (but not sufficient) for gait retraining
+# Biofeedback is necessary, but not sufficient, for gait retraining
 
 This repository contains all the necessary code to reproduce the experimental design and analytical findings described in our manuscript.  
 
