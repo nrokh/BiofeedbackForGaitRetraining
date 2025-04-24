@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import os
 import tkinter as tk
 from tkinter import filedialog
-from scipy import stats
+# from scipy import stats
 from matplotlib.colors import to_rgba
-import ptitprince as pt 
-import seaborn as sns
+# import ptitprince as pt 
+# import seaborn as sns
 
 def calculate_responsiveness(input_FPA, targetFPA):
     incorrect_steps = 0
@@ -124,23 +124,23 @@ for subject in range(1,37):
     print('percent steps in range during NF: ' + str(inRange_nf))
 
     # ii. toe-in trials
-    inRange_t1 = 100 * len(pd.concat([toein1FPA.iloc[:80], toein1FPA.iloc[121:]])[(pd.concat([toein1FPA.iloc[:80], toein1FPA.iloc[121:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein1FPA.iloc[:80], toein1FPA.iloc[121:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein1FPA) - 41)
+    inRange_t1 = 100 * len(pd.concat([toein1FPA.iloc[:90], toein1FPA.iloc[111:]])[(pd.concat([toein1FPA.iloc[:90], toein1FPA.iloc[111:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein1FPA.iloc[:90], toein1FPA.iloc[111:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein1FPA) - 21)
     print('percent steps in range during toe-in 1: ' + str(inRange_t1))
-    inRange_t2 = 100 * len(pd.concat([toein2FPA.iloc[:80], toein2FPA.iloc[121:]])[(pd.concat([toein2FPA.iloc[:80], toein2FPA.iloc[121:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein2FPA.iloc[:80], toein2FPA.iloc[121:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein2FPA) - 41)
+    inRange_t2 = 100 * len(pd.concat([toein2FPA.iloc[:90], toein2FPA.iloc[111:]])[(pd.concat([toein2FPA.iloc[:90], toein2FPA.iloc[111:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein2FPA.iloc[:90], toein2FPA.iloc[111:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein2FPA) - 21)
     print('percent steps in range during toe-in 2: ' + str(inRange_t2))
-    inRange_t3 = 100 * len(pd.concat([toein3FPA.iloc[:80], toein3FPA.iloc[121:]])[(pd.concat([toein3FPA.iloc[:80], toein3FPA.iloc[121:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein3FPA.iloc[:80], toein3FPA.iloc[121:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein3FPA) - 41)
+    inRange_t3 = 100 * len(pd.concat([toein3FPA.iloc[:90], toein3FPA.iloc[111:]])[(pd.concat([toein3FPA.iloc[:90], toein3FPA.iloc[111:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein3FPA.iloc[:90], toein3FPA.iloc[111:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein3FPA) - 21)
     print('percent steps in range during toe-in 3: ' + str(inRange_t3))
-    inRange_t4 = 100 * len(pd.concat([toein4FPA.iloc[:80], toein4FPA.iloc[121:]])[(pd.concat([toein4FPA.iloc[:80], toein4FPA.iloc[121:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein4FPA.iloc[:80], toein4FPA.iloc[121:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein4FPA) - 41)
+    inRange_t4 = 100 * len(pd.concat([toein4FPA.iloc[:90], toein4FPA.iloc[111:]])[(pd.concat([toein4FPA.iloc[:90], toein4FPA.iloc[111:]]).iloc[:, 2] < targetFPA + 2) & (pd.concat([toein4FPA.iloc[:90], toein4FPA.iloc[111:]]).iloc[:, 2] > targetFPA - 2)]) / (len(toein4FPA) - 21)
     print('percent steps in range during toe-in 4: ' + str(inRange_t4))
 
     # iii. catch trials
-    inRange_c1 = 100 * len(toein1FPA.iloc[80:121][(toein1FPA.iloc[80:121, 2] < targetFPA + 2) & (toein1FPA.iloc[80:121, 2] > targetFPA - 2)]) / 40
+    inRange_c1 = 100 * len(toein1FPA.iloc[90:111][(toein1FPA.iloc[90:111, 2] < targetFPA + 2) & (toein1FPA.iloc[90:111, 2] > targetFPA - 2)]) / 20
     print('percent steps in range during catch 1: ' + str(inRange_c1)) 
-    inRange_c2 = 100 * len(toein2FPA.iloc[80:121][(toein2FPA.iloc[80:121, 2] < targetFPA + 2) & (toein2FPA.iloc[80:121, 2] > targetFPA - 2)]) / 40
+    inRange_c2 = 100 * len(toein2FPA.iloc[90:111][(toein2FPA.iloc[90:111, 2] < targetFPA + 2) & (toein2FPA.iloc[90:111, 2] > targetFPA - 2)]) / 20
     print('percent steps in range during catch 2: ' + str(inRange_c2))
-    inRange_c3 = 100 * len(toein3FPA.iloc[80:121][(toein3FPA.iloc[80:121, 2] < targetFPA + 2) & (toein3FPA.iloc[80:121, 2] > targetFPA - 2)]) / 40
+    inRange_c3 = 100 * len(toein3FPA.iloc[90:111][(toein3FPA.iloc[90:111, 2] < targetFPA + 2) & (toein3FPA.iloc[90:111, 2] > targetFPA - 2)]) / 20
     print('percent steps in range during catch 3: ' + str(inRange_c3))
-    inRange_c4 = 100 * len(toein4FPA.iloc[80:121][(toein4FPA.iloc[80:121, 2] < targetFPA + 2) & (toein4FPA.iloc[80:121, 2] > targetFPA - 2)]) / 40
+    inRange_c4 = 100 * len(toein4FPA.iloc[90:111][(toein4FPA.iloc[90:111, 2] < targetFPA + 2) & (toein4FPA.iloc[90:111, 2] > targetFPA - 2)]) / 20
     print('percent steps in range during catch 4: ' + str(inRange_c4))
 
     # iv. retention trial
