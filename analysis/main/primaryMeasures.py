@@ -164,10 +164,10 @@ for subject in range(1,37):
     RMSET4 = np.sqrt(np.mean( (bFPA_deg-10-toein4FPA.iloc[:,2])**2 ))
     
     # iii. catch trials
-    RMSEC1 = np.sqrt(np.mean( (bFPA_deg-10-toein1FPA.iloc[80:121,2])**2 ))
-    RMSEC2 = np.sqrt(np.mean( (bFPA_deg-10-toein2FPA.iloc[80:121,2])**2 ))
-    RMSEC3 = np.sqrt(np.mean( (bFPA_deg-10-toein3FPA.iloc[80:121,2])**2 ))
-    RMSEC4 = np.sqrt(np.mean( (bFPA_deg-10-toein4FPA.iloc[80:121,2])**2 ))
+    RMSEC1 = np.sqrt(np.mean( (bFPA_deg-10-toein1FPA.iloc[90:111,2])**2 ))
+    RMSEC2 = np.sqrt(np.mean( (bFPA_deg-10-toein2FPA.iloc[90:111,2])**2 ))
+    RMSEC3 = np.sqrt(np.mean( (bFPA_deg-10-toein3FPA.iloc[90:111,2])**2 ))
+    RMSEC4 = np.sqrt(np.mean( (bFPA_deg-10-toein4FPA.iloc[90:111,2])**2 ))
     
     # iv. retention
     RMSER = np.sqrt(np.mean( (bFPA_deg-10-retFPA.iloc[:,2])**2 ))
