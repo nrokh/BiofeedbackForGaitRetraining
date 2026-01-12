@@ -3,7 +3,7 @@
 This repository contains all the necessary code to reproduce the experimental design and analytical findings described in our manuscript.  
 
 **Citation:**  
-Rokhmanova N, Sundaram VH, Halilaj E, Kuchenbecker KJ (_under review_) Biofeedback is necessary, but not sufficient, for gait retraining. 
+Rokhmanova N, Sundaram VH, Halilaj E, Kuchenbecker KJ (_under review_) Does Vibrotactile Biofeedback Improve Gait Retraining Performance? 
 
 ## Data availability
 The full set of raw data are available in the Edmond repository linked [here](https://edmond.mpg.de/privateurl.xhtml?token=6656b649-fb6c-4941-91cc-e57072fb158f). The code shared in this repository outlines the full data processing pathway, from raw data to processed features.
